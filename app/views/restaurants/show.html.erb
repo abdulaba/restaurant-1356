@@ -1,3 +1,6 @@
-<H2><%= @restaurant.name %></H2>
-<p><%= @restaurant.address %></p>
-<p><%= @restaurant.city %></p>
+<div class="container">
+  <H2><%= @restaurant.name %></H2>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.city %></p>
+  <%= cl_image_tag @restaurant.photo.key if @restaurant.photo.attached?%>
+</div>
